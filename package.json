@@ -1,0 +1,49 @@
+{
+  "name": "chay.js",
+  "version": "0.1.0",
+  "description": "A lightweight JavaScript mvvm framework.",
+  "main": "dist/chay.js",
+  "dependencies": {
+    "jsep": "^0.3.0",
+    "observed": "0.0.3"
+  },
+  "devDependencies": {
+    "assert": "^1.3.0",
+    "autoprefixer-core": "^5.2.1",
+    "browser-sync": "^1.8.2",
+    "browserify": "^10.2.4",
+    "chai": "^2.3.0",
+    "del": "^1.1.1",
+    "gulp": "^3.8.11",
+    "gulp-if": "^1.2.5",
+    "gulp-jshint": "^1.11.1",
+    "gulp-less": "^3.0.3",
+    "gulp-postcss": "^5.1.9",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "^1.0.1",
+    "gulp-util": "^3.0.6",
+    "jshint-stylish": "^2.0.1",
+    "lodash.assign": "^3.2.0",
+    "mocha": "^2.2.5",
+    "should": "^6.0.1",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3"
+  },
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/creeperyang/chay.js.git"
+  },
+  "keywords": [
+    "mvvm",
+    "mvvm framework"
+  ],
+  "author": "creeper",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/creeperyang/chay.js/issues"
+  },
+  "homepage": "https://github.com/creeperyang/chay.js#readme"
+}
