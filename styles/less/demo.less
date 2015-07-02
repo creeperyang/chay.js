@@ -1,0 +1,96 @@
+@import 'font.less';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans","wenquanyi micro hei","Hiragino Sans GB", "Hiragino Sans GB W3", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.414;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 10px;
+    width: 320px;
+    margin: 64px auto;
+
+    border-radius: 2px;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+
+    &>* {
+        flex: 1 100%;
+        margin: 0 10px;
+    }
+    h3 {
+        margin-top: 8px;
+        margin-bottom: 24px;
+
+        color: blueviolet;
+        font-weight: normal;
+    }
+    input {
+        flex: 2 4px;
+        padding: 10px;
+
+        outline: none;
+        border: none;
+        border-bottom: 1px solid blueviolet;
+        &:focus {
+            border-bottom-color: darken(blueviolet, 10%);
+        }
+    }
+    button {
+        flex: 1 auto;
+        padding: 10px 0;
+
+        color: white;
+
+        outline: none;
+        border: none;
+        -webkit-appearance: none;
+        background-image: none;
+        background-color: blueviolet;
+        border-radius: 3px;
+        transition: background-color 0.3s ease;
+        &:focus {
+            background-color: darken(blueviolet, 10%);
+        }
+    }
+
+    .list {
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        list-style: none;
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        label i {
+            display: inline-block;
+            vertical-align: baseline;
+            color: blueviolet;
+        }
+        span.done {
+            text-decoration: line-through;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        a {
+            text-decoration: none;
+            float: right;
+            color: #F44548;
+        }
+    }
+}

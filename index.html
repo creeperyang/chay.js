@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Todos</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="styles/demo.css">
+</head>
+
+<body>
+    <div id="demo" class="container">
+        <h3><i class='icon icon-clipboard'></i>&nbsp;Todos</h3>
+        <input hy-model="newTodo" class="item" placeholder="Input your new todo" />
+        <button hy-click="add()" class="item">Add</button>
+        <ul class="item list">
+            <li hy-repeat="item in todos">
+                <label>
+                    <i class='icon' hy-class="{icon-checkbox-checked: item.done, icon-checkbox-unchecked: !item.done}"></i>
+                    &nbsp;&nbsp;{{$index + 1}}.&nbsp;
+                    <input type="checkbox" hy-model="item.done" />
+                    <span hy-class="done:item.done">{{item.title}}</span>
+                </label>
+                <a href="Javascript:" hy-click="remove(item, $event)">
+                    <i class='icon icon-cancel-circle'></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="scripts/chay.js"></script>
+    <script type="text/javascript" src='scripts/demo.js'></script>
+</body>
+
+</html>
