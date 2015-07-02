@@ -5,7 +5,12 @@ var compileExpr = expr.compile;
 var getDepends = expr.getDepends;
 
 function Directive(options) {
-    options = options || {};
+    // just return this if options is empty
+    // the sub directive always set prototype = new Directive()
+    if(!options) {
+        return this;
+    }
+
     this.element = options.element;
     this.expression = options.expression;
     this.context = options.context;
@@ -13,10 +18,11 @@ function Directive(options) {
     this.bind();
 }
 
-Directive.prototype.bind = function() {
+// sometimes, when subclass call bind, they may apply options to custom
+Directive.prototype.bind = function(options) {
     var directive = this;
     if (directive.element && directive.expression && directive.context) {
-        directive.valueFn = compileExpr(directive.expression, directive.context);
+        directive.valueFn = compileExpr(directive.expression, directive.context, options);
 
         var depends = getDepends(directive.expression);
         var context = directive.context;

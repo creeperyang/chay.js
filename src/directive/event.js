@@ -17,9 +17,16 @@ EventDirective.prototype = new Directive();
 EventDirective.prototype.isPair = true;
 
 EventDirective.prototype.bind = function() {
-    Directive.prototype.bind.call(this);
+    var directive = this;
+    Directive.prototype.bind.call(this, {
+        isEvent: true,
+        event: this.event
+    });
     if(this.element) {
-        this.element.addEventListener(this.event, this.valueFn, false);
+        // always offer $event
+        this.element.addEventListener(this.event, function($event) {
+            directive.valueFn($event);
+        }, false);
     }
 };
 
