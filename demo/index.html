@@ -21,7 +21,7 @@
                     <input type="checkbox" hy-model="item.done" />
                     <span hy-class="done:item.done">{{item.title}}</span>
                 </label>
-                <a href="Javascript:" hy-click="remove(item)">
+                <a href="Javascript:" hy-click="remove(item, $event)">
                     <i class='icon icon-cancel-circle'></i>
                 </a>
             </li>

@@ -1,10 +1,10 @@
 var context = {
     newTodo: "",
     todos: [{
-        title: 'first',
+        title: 'Meeting at 14:00',
         done: true
     }, {
-        title: 'second',
+        title: 'Have dinner with Kate',
         done: false
     }],
     add: function() {
@@ -14,7 +14,8 @@ var context = {
         });
         this.newTodo = '';
     },
-    remove: function(item) {
+    remove: function(item, ev) {
+        console.log(ev)
         this.todos.splice(this.todos.indexOf(item), 1);
     }
 };
